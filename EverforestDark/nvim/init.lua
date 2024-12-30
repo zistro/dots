@@ -44,6 +44,10 @@ local builtin = require("telescope.builtin")
 vim.api.nvim_set_keymap('n', 'f', "<cmd>Telescope find_files hidden=true<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'L', "<cmd>Telescope live_grep additional_args={\"--hidden\"}<CR>", { noremap = true, silent = true })
 
+vim.cmd [[
+  set number          " Enable absolute line numbers
+  set relativenumber  " Enable relative line numbers
+]]
 
 -- Use xclip for clipboard operations
 if vim.fn.executable('xclip') == 1 then
